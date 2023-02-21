@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - This function aims to print out '_putchar' using putchar
  *
@@ -7,25 +7,14 @@
 
 int main(void)
 {
-	int letter;
+	int str[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	int count, sz;
+
+	sz = sizeof(str) / sizeof(int);
+	for (count = 0; count < sz; count++)
 	{
-		letter = '_';
-		putchar(letter);
-		letter = 'p';
-		putchar(letter);
-		letter = 'u';
-		putchar(letter);
-		letter = 't';
-		putchar(letter);
-		letter = 'c';
-		putchar(letter);
-		letter = 'h';
-		putchar(letter);
-		letter = 'a';
-		putchar(letter);
-		letter = 'r';
-		putchar(letter);
+		_putchar(str[count]);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
