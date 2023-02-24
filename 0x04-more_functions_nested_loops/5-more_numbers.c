@@ -6,21 +6,18 @@
  * Return: no returns.
  */
 
-void more_numbers(void);
+void more_numbers(void)
 {
-	int a = 0, b;
+	int i, ch;
 
-	while (a < 10)
+	for (i = 0; i < 10; i++)
 	{
-		for (b = 0; b <= 14; b++)
+		for (ch = 0; ch < 15; ch++)
 		{
-			if (b >= 10)
-			{
-				_putchar((b / 10) + 48);
-				_putchar((b % 10) + 48);
-			}
+			if (ch >= 10)
+				_putchar((ch / 10) + 48);
+			_putchar((ch % 10) + 48);
 		}
 		_putchar('\n');
-		a++;
 	}
 }
