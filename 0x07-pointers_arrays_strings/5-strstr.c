@@ -10,16 +10,22 @@
 
 char *_strstr(char *haystack, char *needle)
 {
+	char *bhaystack;
+	char *pneedle;
+
 	while (*haystack != '\0')
 	{
-		while (*haystack != '\0' && *needle != '\0' && *haystack == *needle)
+		bhaystack = haystack;
+		pneedle = needle;
+
+		while (*haystack != '\0' && *pneedle != '\0' && *haystack == *pneedle)
 		{
 			haystack++;
-			needle++;
+			pneedle++;
 		}
-		if (!*needle)
-			return (haystack);
-		haystack = haystack + 1;
+		if (!*pneedle)
+			return (bhaystack);
+		haystack = bhaystack + 1;
 	}
 	return (0);
 }
