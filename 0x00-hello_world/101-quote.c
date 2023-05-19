@@ -1,11 +1,11 @@
 #include <unistd.h>
 #include <string.h>
+
 /**
  * main - Entry point
  *
  * Return: Always 1 (success)
  */
-
 int main(void)
 {
 	const char *msg = "and that piece of art is useful\" Dora Korpar, 2015-10-19\n";
@@ -13,4 +13,3 @@ int main(void)
 	write(2, msg, strlen(msg));
 	return (1);
 }
-
