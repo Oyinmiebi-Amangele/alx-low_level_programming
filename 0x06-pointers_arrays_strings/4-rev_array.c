@@ -18,9 +18,9 @@ void reverse_array(int *a, int n)
 	while (start < end)
 	{
 		/* swap the element at start & end position */
-		temp = start;
-		start = end;
-		end = start;
+		temp = a[start];
+                a[start] = a[end];
+                a[end] = a[start];
 		/* move the start and end position towards the middle */
 		start++;
 		end--;
