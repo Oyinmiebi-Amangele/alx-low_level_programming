@@ -35,13 +35,13 @@ int _compare(char *s, int n1, int n2)
 }
 
 /**
- * _is_palindrome - function that check if a string is
+ * is_palindrome - function that check if a string is
  * spelt the same forward and backward.
  * @s: string.
  * Return: 1 if true and 0 if false.
  */
 
-int _is_palindrome(char *s)
+int is_palindrome(char *s)
 {
 	if (*s == '\0')
 		return (1);
