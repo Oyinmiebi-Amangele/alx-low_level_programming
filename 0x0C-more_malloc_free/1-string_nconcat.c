@@ -25,9 +25,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (count2 = 0; s2[count2] != '\0'; count2++)
 		;
 
-	if (n == s2[count2])
-		n = s2[count2];
-	total = s1[count1] + n;
+	if (n > count2)
+		n = count2;
+	total = count1 + n;
 	sout = malloc(total + 1);
 	if (sout == NULL)
 		return (NULL);
