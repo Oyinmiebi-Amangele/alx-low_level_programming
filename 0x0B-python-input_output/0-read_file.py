@@ -3,7 +3,13 @@
 
 
 def read_file(filename=""):
-    with open(filename, 'r') as files:
-        read_file = files.read()
+    """function that reads from a file
+    Args:
+        filename: filename
+    Raises
+        Exception: when the file can be opened
+    """
 
-    print(read_file)
+    with open(filename, 'r', encoding="utf-8") as files:
+        read_file = files.read()
+        print(read_file, end='')
